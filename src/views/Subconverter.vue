@@ -69,16 +69,16 @@
 
               <el-form-item label="后端地址:">
 
-              <el-select
-                  v-model="form.customBackend"
-                  allow-create
-                  filterable
-                  placeholder="请选择"
-                  style="width: 100%"
-                >
-                  <el-option v-for="(v, k) in options.customBackend" :key="k" :label="k" :value="v"></el-option>
+<!--              <el-select-->
+<!--                  v-model="form.customBackend"-->
+<!--                  allow-create-->
+<!--                  filterable-->
+<!--                  placeholder="请选择"-->
+<!--                  style="width: 100%"-->
+<!--                >-->
+<!--                  <el-option v-for="(v, k) in options.customBackend" :key="k" :label="k" :value="v"></el-option>-->
 
-                </el-select>
+<!--                </el-select>-->
 
               </el-form-item>
 
@@ -228,7 +228,7 @@ export default {
   data() {
     var data = {
       backendVersion: '0.6.4',
-      advanced: "1",
+      advanced: "2",
 
       // 是否为 PC 端
       isPC: true,
