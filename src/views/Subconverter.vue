@@ -5,13 +5,13 @@
         <el-card style="margin-top:20px;max-width:800px;margin:auto;opacity:0.8;blackground-color:#0F4677;border-radius: 20px;">
           <div slot="header" style="blackground-color:#0F4677;text-align:center;font-size :25px !important;font-weight: bold !important;">
             <svg-icon icon-class="lock" style="margin-left: 20px" title="完整魔改版:v1.4"/>
-            つつの订阅转换
+            Niko的订阅转换
             <svg-icon icon-class="telegram" style="margin-left: 10px" title="加入Telegram吹水群" @click="gotoTgChannel" />
           </div>
           <el-container>
             <el-form :model="form" label-width="80px" label-position="left" style="width: 100%;">
               <el-form-item label="进阶选项:">
-                
+
                   <div class="switch">
                     <input id="cmn-toggle-1" class="cmn-toggle cmn-toggle-round" type="checkbox">
                     <label for="cmn-toggle-1"></label>
@@ -85,12 +85,13 @@
               <div v-if="advanced === '2'">
 
 
-                <el-form-item label="包含节点:">
-                  <el-input v-model="form.includeRemarks" placeholder="节点名包含的关键字，支持正则" />
-                </el-form-item>
-                <el-form-item label="排除节点:">
-                  <el-input v-model="form.excludeRemarks" placeholder="节点名不包含的关键字，支持正则" />
-                </el-form-item>
+<!--                <el-form-item label="包含节点:">-->
+<!--                  <el-input v-model="form.includeRemarks" placeholder="节点名包含的关键字，支持正则" />-->
+<!--                </el-form-item>-->
+<!--                <el-form-item label="排除节点:">-->
+<!--                  <el-input v-model="form.excludeRemarks" placeholder="节点名不包含的关键字，支持正则" />-->
+<!--                </el-form-item>-->
+
                 <el-form-item label="输出名称:">
                   <el-input v-model="form.filename" placeholder="返回的订阅文件名" />
                 </el-form-item>
@@ -137,7 +138,7 @@
                 </el-input>
               </el-form-item>
 
-              
+
               <el-form-item label-width="0px" style="margin-top: 40px; text-align: center">
                 <el-button
                   style="width: 120px"
@@ -247,101 +248,31 @@ export default {
           "Shadowsocks(SIP002)": "ss",
           "Shadowsocks Android(SIP008)": "sssub",
           ShadowsocksR: "ssr",
-          ShadowsocksD: "ssd",          
+          ShadowsocksD: "ssd",
           V2Ray: "v2ray",
           Trojan: "trojan",
           "混合订阅（mixed）": "mixed",
           "自动判断客户端": "auto",
         },
         customBackend: {
-          "つつの专属后端 (六核负载均衡-支持IPv4/IPv6)": "https://api.tsutsu.one/sub?",
+          "Niko专属后端 (六核负载均衡-支持IPv4/IPv6)": "https://api.tsutsu.one/sub?",
         },
         backendOptions: [
           { value: "https://api.tsutsu.one/sub?" },
         ],
         remoteConfig: [
           {
-            label: "つつの专属规则",
+            label: "Niko专属规则",
             options: [
               {
-                label: "つつ-全分组",
+                label: "Clash个人简化分组(推荐)",
+                value:
+                    "https://cdn.staticaly.com/gh/NikoCera/Profile/master/clash_myRule.ini"
+              },
+              {
+                label: "全规则分组",
                 value:
                   "https://cdn.jsdelivr.net/gh/lhl77/sub-ini@main/tsutsu-full.ini"
-              },
-              {
-                label: "つつ-全分组-地区自动选择",
-                value:
-                  "https://cdn.jsdelivr.net/gh/lhl77/sub-ini@main/tsutsu-full-urltest.ini"
-              },
-              {
-                label: "つつ-超jb精简分组-含国内分流",
-                value:
-                  "https://cdn.jsdelivr.net/gh/lhl77/sub-ini@main/tsutsu-mini-gfw.ini"
-              },
-            ]
-          },
-	{
-            label: "つつの机场定制",
-            options: [
-              {
-                label: "Immtelecom",
-                value:
-                  "https://cdn.jsdelivr.net/gh/lhl77/sub-ini@main/tsutsu-full-urltest-imm.ini"
-              },
-              {
-                label: "Skicat",
-                value:
-                  "https://cdn.jsdelivr.net/gh/lhl77/sub-ini@main/tsutsu-full-skicat.ini"
-              },
-              {
-                label: "Maoport",
-                value:
-                  "https://raw.githubusercontent.com/lhl77/sub-ini/main/tsutsu-maoport-full.ini"
-              },
-            ]
-          },
-          {
-            label: "用户投稿,投稿请tg找 @Ox208",
-            options: [
-              {
-                label: "hope140自用配置 (与Github同步)",
-                value:
-                  "https://cdn.staticaly.com/gh/hope140/Clash/beta/hope140.yaml"
-              },
-              {
-                label: "hope140去广告配置",
-                value:
-                  "https://cdn.staticaly.com/gh/hope140/Clash/beta/Adblock.yaml"
-              },
-              {
-                label: "hope140全分组",
-                value:
-                  "https://cdn.staticaly.com/gh/hope140/Clash/beta/All.yaml"
-              },
-              {
-                label: "Yuki隐藏国内IP属地-极简",
-                value:
-                  "https://raw.githubusercontent.com/godlikeanyone/Rules/master/subconvert.ini"
-              },
-              {
-                label: "AllenXu精简版多国家",
-                value:
-                  "https://raw.githubusercontent.com/hyt-allen-xu/webcdn/master/cdn_multicountry.ini"
-              },
-              {
-                label: "AllenXu小机场专用",
-                value:
-                  "https://raw.githubusercontent.com/hyt-allen-xu/webcdn/master/smallairport.ini"
-              },
-              {
-                label: "酷酷规则",
-                value:
-                  "https://raw.githubusercontent.com/xiaoshenxian233/cool/rule/coolcool.ini"
-              },
-              {
-                label: "NormalPeople 规则集 (仅P核)",
-                value:
-                  "https://raw.githubusercontent.com/wyk19/subconverter-web/master/rules/rule-set.ini"
               },
             ]
           },
@@ -486,7 +417,7 @@ export default {
   },
   created() {
     // document.title = "Subscription Converter";
-    document.title = "つつの订阅转换";
+    document.title = "Niko的订阅转换";
      this.isPC = this.$getOS().isPc;
 
     // 获取 url cache
@@ -497,7 +428,7 @@ export default {
   mounted() {
     this.form.clientType = "clash";
     this.form.customBackend = "https://api.tsutsu.one/sub?";
-    this.form.remoteConfig = "https://cdn.jsdelivr.net/gh/lhl77/sub-ini@main/tsutsu-full.ini";
+    this.form.remoteConfig = "https://cdn.staticaly.com/gh/NikoCera/Profile/master/clash_myRule.ini";
     //this.getBackendVersion();
   },
   methods: {
@@ -689,7 +620,7 @@ export default {
         .then(res => {
           if (res.data.code === 0 && res.data.data !== "") {
             this.$message.success("远程配置上传成功，配置链接已复制到剪贴板");
-            
+
 
             // 自动填充至『表单-远程配置』
             this.form.remoteConfig = res.data.data;
