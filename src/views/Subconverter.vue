@@ -68,7 +68,7 @@
               </el-form-item>
 
               <el-form-item label="后端地址:">
-                <el-input v-model="form.customBackend" placeholder="Niko专属后端 (六核负载均衡-支持IPv4/IPv6)"/>
+                <el-input v-model="form.filename" placeholder="Niko专属后端 (六核负载均衡-支持IPv4/IPv6)"/>
               </el-form-item>
 
               <div v-if="advanced === '2'">
