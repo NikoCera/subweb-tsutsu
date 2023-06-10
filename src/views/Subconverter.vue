@@ -69,12 +69,15 @@
 
               <el-form-item label="后端地址:">
 
-              <el-form-item
-                  v-model="form.customBackend"
-                  style="width: 100%"
+                <el-select
+                    v-model="form.customBackend"
+                    disabled
+                    placeholder="请选择"
+                    suffix-icon="el-icon-view"
+                    style="width: 100%"
                 >
                   <el-option v-for="(v, k) in options.customBackend" :key="k" :label="k" :value="v"></el-option>
-                </el-form-item>
+                </el-select>
 
               </el-form-item>
 
