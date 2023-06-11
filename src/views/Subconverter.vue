@@ -433,9 +433,9 @@ export default {
     onCopy() {
       this.$message.success("Copied!");
     },
-    goToProject() {
-      window.open(project);
-    },
+    // goToProject() {
+    //   window.open(project);
+    // },
 	gotoTgChannel() {
       window.open(tgBotLink);
     },
