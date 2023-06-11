@@ -4,7 +4,7 @@
       <el-col>
         <el-card style="margin-top:20px;max-width:800px;margin:auto;opacity:0.8;blackground-color:#0F4677;border-radius: 20px;">
           <div slot="header" style="blackground-color:#0F4677;text-align:center;font-size :25px !important;font-weight: bold !important;">
-            <svg-icon icon-class="lock" style="margin-left: 20px" title="完整魔改版:v1.4"/>
+            <svg-icon icon-class="github" style="margin-left: 20px" title="github链接" @click="gotoGithubLink"/>
             Niko的订阅转换
             <svg-icon icon-class="telegram" style="margin-left: 10px" title="加入Telegram吹水群" @click="gotoTgChannel" />
           </div>
@@ -216,11 +216,11 @@
 <script>
 const project = process.env.VUE_APP_PROJECT
 const remoteConfigSample = process.env.VUE_APP_SUBCONVERTER_REMOTE_CONFIG
-const gayhubRelease = process.env.VUE_APP_BACKEND_RELEASE
 const defaultBackend = process.env.VUE_APP_SUBCONVERTER_DEFAULT_BACKEND + '/sub?'
 const shortUrlBackend = process.env.VUE_APP_MYURLS_DEFAULT_BACKEND + '/short'
 const configUploadBackend = process.env.VUE_APP_CONFIG_UPLOAD_BACKEND + '/sub.php'
 const tgBotLink = process.env.VUE_APP_BOT_LINK
+const githubLink = process.env.VUE_APP_GITHUB_LINK
 
 export default {
   data() {
@@ -263,7 +263,7 @@ export default {
             label: "Niko专属规则",
             options: [
               {
-                label: "Clash个人简化分组(推荐)",
+                label: "Clash个人精简分组(推荐)",
                 value:
                     "https://cdn.staticaly.com/gh/NikoCera/Profile/master/clash_myRule.ini"
               },
@@ -439,8 +439,8 @@ export default {
 	gotoTgChannel() {
       window.open(tgBotLink);
     },
-    gotoGayhub() {
-      window.open(gayhubRelease);
+    gotoGithubLink() {
+      window.open(githubLink);
     },
     gotoRemoteConfig() {
       window.open(remoteConfigSample);
