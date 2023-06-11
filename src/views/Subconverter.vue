@@ -6,7 +6,7 @@
           <div slot="header" style="blackground-color:#0F4677;text-align:center;font-size :25px !important;font-weight: bold !important;">
             <svg-icon icon-class="github" style="margin-left: 20px" title="github链接" @click="gotoGithubLink"/>
             Niko的订阅转换
-            <svg-icon icon-class="telegram" style="margin-left: 10px" title="加入Telegram吹水群" @click="gotoTgChannel" />
+            <svg-icon icon-class="telegram" style="margin-left: 20px" title="加入Telegram吹水群" @click="gotoTgChannel" />
           </div>
           <el-container>
             <el-form :model="form" label-width="80px" label-position="left" style="width: 100%;">
@@ -214,7 +214,7 @@
 </template>
 
 <script>
-const project = process.env.VUE_APP_PROJECT
+// const project = process.env.VUE_APP_PROJECT
 const remoteConfigSample = process.env.VUE_APP_SUBCONVERTER_REMOTE_CONFIG
 const defaultBackend = process.env.VUE_APP_SUBCONVERTER_DEFAULT_BACKEND + '/sub?'
 const shortUrlBackend = process.env.VUE_APP_MYURLS_DEFAULT_BACKEND + '/short'
