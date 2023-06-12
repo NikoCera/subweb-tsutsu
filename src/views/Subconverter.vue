@@ -214,7 +214,7 @@
 </template>
 
 <script>
-// const project = process.env.VUE_APP_PROJECT
+const project = process.env.VUE_APP_PROJECT
 const remoteConfigSample = process.env.VUE_APP_SUBCONVERTER_REMOTE_CONFIG
 const defaultBackend = process.env.VUE_APP_SUBCONVERTER_DEFAULT_BACKEND + '/sub?'
 const shortUrlBackend = process.env.VUE_APP_MYURLS_DEFAULT_BACKEND + '/short'
@@ -390,8 +390,8 @@ export default {
       needUdp: false, // 是否需要添加 udp 参数
     };
 
-    // window.console.log(data.options.remoteConfig);
-    // window.console.log(data.options.customBackend);
+    window.console.log(data.options.remoteConfig);
+    window.console.log(data.options.customBackend);
     let phoneUserAgent = /Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
       navigator.userAgent
     );
@@ -433,9 +433,9 @@ export default {
     onCopy() {
       this.$message.success("Copied!");
     },
-    // goToProject() {
-    //   window.open(project);
-    // },
+    goToProject() {
+      window.open(project);
+    },
 	gotoTgChannel() {
       window.open(tgBotLink);
     },
