@@ -265,12 +265,12 @@ export default {
               {
                 label: "Clash个人精简分组(推荐)",
                 value:
-                    "https://cdn.staticaly.com/gh/NikoCera/Profile/master/clash_myRule.ini"
+                    "https://raw.githubusercontent.com/NikoCera/Profile/master/clash_myRule.ini"
               },
               {
                 label: "全规则分组",
                 value:
-                  "https://cdn.jsdelivr.net/gh/lhl77/sub-ini@main/tsutsu-full.ini"
+                  "https://raw.githubusercontent.com/lhl77/sub-ini/main/tsutsu-full.ini"
               },
             ]
           },
@@ -426,7 +426,7 @@ export default {
   mounted() {
     this.form.clientType = "clash";
     this.form.customBackend = "https://api.tsutsu.one/sub?";
-    this.form.remoteConfig = "https://cdn.staticaly.com/gh/NikoCera/Profile/master/clash_myRule.ini";
+    this.form.remoteConfig = "https://raw.githubusercontent.com/NikoCera/Profile/master/clash_myRule.ini";
     //this.getBackendVersion();
   },
   methods: {
